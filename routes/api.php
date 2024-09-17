@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+$folder = 'controller_routes';
+$sufix = 'Route.php';
+
+include $folder . '/Empresa' . $sufix;
+include $folder . '/Funcionario' . $sufix;
+include $folder . '/Medico' . $sufix;
+include $folder . '/Consulta' . $sufix;
+include $folder . '/Atestado' . $sufix;
+include $folder . '/Exame' . $sufix;
